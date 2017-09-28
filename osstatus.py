@@ -73,7 +73,6 @@ def fetchResults(code, platform):
     #     'https://osstatus.com/api/search/errors.json?search=' + str(code) + suffix
     url = 'https://jzcbid2qol.execute-api.us-east-2.amazonaws.com/prod?search=' + str(code) + suffix
     try:
-        print(url)
         headers = {'User-Agent': 'lldb_osstatus'}
         request = Request(url, headers=headers)
         rawJSON = urlopen(request).read()
